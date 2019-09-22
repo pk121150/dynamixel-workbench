@@ -1,3 +1,10 @@
+- sudo apt-get install ros-kinetic-dynamixel-sdk
+- sudo apt-get install ros-kinetic-dynamixel-workbench-msgs
+- cd catkin_ws/src/
+- git clone https://github.com/pk121150/dynamixel-workbench.git
+- cd ..
+- catkin_make
+
 # Dynamixel Workbench
 ![](https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/sw/dynamixel/dynamixel_workbench/DYNAMIXEL_WORKBENCH_LOGO.png)
 
