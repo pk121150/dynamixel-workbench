@@ -1,0 +1,3 @@
+joint:
+  names: [motor1,motor2,motor3,motor4]  
+  

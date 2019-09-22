@@ -1,0 +1,16 @@
+joint:
+  names: [motor1, motor2, motor3]
+motion:
+  names: [action1, action2, action3]
+  action1:
+    step: [-3.14, -3.14, -3.14]  # radian
+    time_from_start: 2.0  # sec
+  action2:
+    step: [3.15, 3.15, 3.15]
+    time_from_start: 6.0
+  action3:
+    step: [0, 0, 0]
+    time_from_start: 8.0
+
+  
+

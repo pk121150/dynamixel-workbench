@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="namespace"               default="dynamixel_workbench"/>
+  <param name="$(arg namespace)/joint_names" value="$(find dynamixel_workbench_operators)/config/motor2.yaml"/>
+  <node name="single_position_pub_motor2" pkg="dynamixel_workbench_operators" type="single_position_pub" required="true"  output="screen" ns="$(arg namespace)"/>
+</launch>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="namespace"               default="dynamixel_workbench"/>
+
+  <rosparam param = "numOfGoals">8</rosparam>
+  <rosparam param = "goalListX">[0,8,8,0,0,-8,-8,0]</rosparam>
+  <rosparam param = "goalListY">[5,5,-5,-5,5,5,-5,-5]</rosparam>
+  <!--rosparam param = "numOfGoals">2</rosparam>
+  <rosparam param = "goalListX">[0,8]</rosparam>
+  <rosparam param = "goalListY">[5,5]</rosparam-->
+	  
+  <param name="$(arg namespace)/joint_names" value="$(find dynamixel_workbench_operators)/config/joint_names.yaml"/>
+  <node name="position_assign" pkg="dynamixel_workbench_operators" type="position_assign_v2"  output="screen" ns="$(arg namespace)"/>
+
+  <arg name="map_file" default="$(find dynamixel_workbench_operators)/map/map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find dynamixel_workbench_operators)/rviz/view.rviz"/>
+
+</launch>
